@@ -1,0 +1,4 @@
+[submodule "vendor/bcrypt"]
+	path = vendor/bcrypt
+	url = https://github.com/rg3/bcrypt.git
+	ignore = dirty
