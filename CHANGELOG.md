@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1 (2015-03-18)
+
+  * Ensure test.l is executable
+
 ## 0.2.0 (2015-03-18)
 
   * Add unit tests using picolisp-unit
