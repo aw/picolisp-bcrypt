@@ -1,6 +1,6 @@
 # bcrypt hashing for PicoLisp
 
-[![GitHub release](https://img.shields.io/github/release/aw/picolisp-bcrypt.svg)](https://img.shields.io/github/release/aw/picolisp-bcrypt) [![Dependency](https://img.shields.io/badge/[deps] bcrypt-master-ff69b4.svg)](https://github.com/rg3/bcrypt.git)
+[![GitHub release](https://img.shields.io/github/release/aw/picolisp-bcrypt.svg)](https://img.shields.io/github/release/aw/picolisp-bcrypt) [![Dependency](https://img.shields.io/badge/[deps] bcrypt-master-ff69b4.svg)](https://github.com/rg3/bcrypt.git) [![Dependency](https://img.shields.io/badge/[deps] picolisp--unit-v0.1.1-ff69b4.svg)](https://github.com/aw/picolisp-unit.git)
 
 This library can be used to hash strings (ex: passwords) using bcrypt in [PicoLisp](http://picolisp.com/).
 
@@ -10,6 +10,7 @@ This library can be used to hash strings (ex: passwords) using bcrypt in [PicoLi
   2. [Getting Started](#getting-started)
   3. [Usage](#usage)
   4. [Examples](#examples)
+  5. [Testing](#testing)
   6. [Contributing](#contributing)
   7. [License](#license)
 
@@ -122,6 +123,12 @@ pil +
 (timing 15)
 -> (15 . 4)
 ```
+
+# Testing
+
+This library now comes with full [unit tests](https://github.com/aw/picolisp-unit). To run the tests, run:
+
+    ./test.l
 
 # Contributing
 
