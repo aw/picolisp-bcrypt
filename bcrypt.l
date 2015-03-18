@@ -2,7 +2,7 @@
 
 [setq MODULE_INFO
   '(("name"       "bcrypt")
-    ("version"    "0.2.2")
+    ("version"    "0.2.3")
     ("summary"    "bcrypt hashing for PicoLisp")
     ("source"     "https://github.com/aw/picolisp-bcrypt.git")
     ("author"     "Alexander Williams")

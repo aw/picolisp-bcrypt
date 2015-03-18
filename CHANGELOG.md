@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.3 (2015-03-18)
+
+  * Update picolisp-unit dependency to v0.1.2
+
 ## 0.2.2 (2015-03-18)
 
   * Add .travis.yml for automated build tests
