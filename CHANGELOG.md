@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.4 (2015-03-18)
+
+  * Fix reversed assertions
+
 ## 0.2.3 (2015-03-18)
 
   * Update picolisp-unit dependency to v0.1.2

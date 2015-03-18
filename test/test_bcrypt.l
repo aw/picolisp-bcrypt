@@ -14,19 +14,19 @@
   (compare "changeme" "I have no idea what i'm doing") NIL ) )
 
 (de test-hash-factor-12 ()
-  (unit~assert-equal  *Salt_12
-                      (sub? "$2a$12" *Salt_12)
+  (unit~assert-equal  (sub? "$2a$12" *Salt_12)
+                      *Salt_12
                       "Generate a bcrypt hash with factor of 12" ) )
 
 [unit~execute
   '(test-hash-factor-12)
 
-  '(unit~assert-equal *Salt_14
-                      (sub? "$2a$14" *Salt_14)
+  '(unit~assert-equal (sub? "$2a$14" *Salt_14)
+                      *Salt_14
                       "Generate a bcrypt hash with factor of 14" )
 
-  '(unit~assert-equal *Salt_90
-                      (sub? "$2a$12" *Salt_90)
+  '(unit~assert-equal (sub? "$2a$12" *Salt_90)
+                      *Salt_90
                       "Does NOT generate a bcrypt hash with factor of 90" )
 
   '(unit~assert-equal (sub? *Salt_12 *Hash)
@@ -37,22 +37,22 @@
                       *Passwd
                       "Generate bcrypt password without providing a hash" )
 
-  '(unit~assert-equal (compare "changeme" *Passwd)
-                      T
+  '(unit~assert-equal T
+                      (compare "changeme" *Passwd)
                       "Successfully compare a password and hash" )
 
-  '(unit~assert-equal (compare "changeme" "$2a$12$2Lgk0P5s5VsxDUM2aa/HFu/6DwHce1lbUwJ1kTm092DwEeDRHHYBy")
-                      NIL
+  '(unit~assert-equal NIL
+                      (compare "changeme" "$2a$12$2Lgk0P5s5VsxDUM2aa/HFu/6DwHce1lbUwJ1kTm092DwEeDRHHYBy")
                       "Fail to compare a password and hash" )
 
-  '(unit~assert-equal *Error_1
-                      '(BcryptError . "Unable to hash password")
+  '(unit~assert-equal '(BcryptError . "Unable to hash password")
+                      *Error_1
                       "Throw an InternalError when trying to compare an invalid hash")
 
-  '(unit~assert-equal (car (timing))
-                      12
+  '(unit~assert-equal 12
+                      (car (timing))
                       "Timing a hash with the default factor of 12")
 
-  '(unit~assert-equal (> (cdr (timing 15)) 1)
-                      T
+  '(unit~assert-equal T
+                      (> (cdr (timing 15)) 1)
                       "Timing a hash in more than 1 second with a factor of 15") ]
