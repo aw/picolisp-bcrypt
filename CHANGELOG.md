@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2 (2015-03-18)
+
+  * Add .travis.yml for automated build tests
+
 ## 0.2.1 (2015-03-18)
 
   * Ensure test.l is executable
