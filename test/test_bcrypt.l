@@ -45,7 +45,7 @@
 
   '(unit~assert-throws  'InternalError
                         '(BcryptError . "Unable to hash password")
-                        (compare "changeme" "I have no idea what i'm doing")
+                        '(compare "changeme" "I have no idea what i'm doing")
                         "Throw an InternalError when trying to compare an invalid hash" )
 
   '(unit~assert-equal 12
