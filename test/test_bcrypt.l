@@ -4,9 +4,7 @@
 
 (symbols 'bcrypt)
 
-(setq *Salt_14  (gensalt 14)
-      *Salt_12  (gensalt)
-      *Salt_90  (gensalt 90)
+(setq *Salt_12  (gensalt)
       *Hash     (hashpw "changeme" *Salt_12)
       *Passwd   (hashpw "changeme") )
 
@@ -22,11 +20,11 @@
   '(test-hash-factor-12)
 
   '(unit~assert-includes  "$2a$14"
-                          *Salt_14
+                          (gensalt 14)
                           "Generate a bcrypt hash with factor of 14" )
 
   '(unit~assert-includes  "$2a$12"
-                          *Salt_90
+                          (gensalt 90)
                           "Does NOT generate a bcrypt hash with factor of 90" )
 
   '(unit~assert-includes  *Salt_12
