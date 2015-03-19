@@ -6,6 +6,9 @@
 
 (symbols 'bcrypt 'pico)
 
+(local MODULE_INFO *Bcrypt *BCRYPT_HASHSIZE *Work_factor *Salt_struct)
+(local bcrypt-gensalt bcrypt-hashpw throw-error epoch to-string)
+
 (load (pack (car (file)) "module.l"))
 
 (setq

@@ -13,6 +13,10 @@
                         *Salt
                         "Generate a bcrypt hash with factor of 12" ) )
 
+(de test-leaky-symbols ()
+  (unit~assert-nil  (= "bcrypt" (cadr (assoc "name" pico~MODULE_INFO)))
+                    "Ensure local symbols are not leaked globally" ) )
+
 [unit~execute
   '(test-hash-factor-12)
 
@@ -48,4 +52,6 @@
                       "Timing a hash with the default factor of 12" )
 
   '(unit~assert-t (> (cdr (timing 15)) 1)
-                  "Timing a hash in more than 1 second with a factor of 15") ]
+                  "Timing a hash in more than 1 second with a factor of 15")
+
+  '(test-leaky-symbols) ]

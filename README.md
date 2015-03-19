@@ -42,11 +42,11 @@ This library uses git submodules, type this keep everything updated:
 
     ./update.sh
 
-It rebuilds the share libraries and pulls the latest submodule changes.
+It rebuilds the shared libraries and pulls the latest submodule changes.
 
 # Usage
 
-All functions are publicly accessible and namespaced with `(symbols 'bcrypt)` (or the prefix: `bcrypt~`), but only the following are necessary:
+Only the following functions are exported publicly, and namespaced with `(symbols 'bcrypt)` (or the prefix: `bcrypt~`):
 
   * **(gensalt Factor)** generates a salt to be used for hashing a string
     - `Factor` _Number_: a Number between 4 and 31, defaults to `12` otherwise
@@ -57,6 +57,8 @@ All functions are publicly accessible and namespaced with `(symbols 'bcrypt)` (o
     - `Passwd` _String_: the password String
     - `Hash` _String_: the hashed String of the password
   * **(timing Factor)** calculates the timing of a password hashing, in seconds. Returns the factor in `car` and seconds in `cdr`
+
+> **Note:** These functions are not namespace [local symbols](http://software-lab.de/doc/refL.html#local), which means they would redefine symbols with the same name in the `'pico` namespace.
 
 ### Notes
 
