@@ -10,6 +10,7 @@ git submodule init
 git submodule update
 
 cd vendor/bcrypt
+  rm -f libbcrypt.so
   gcc -O2 -g -I. -Icrypt_blowfish/ -fPIC -shared -Wl,-soname,libbcrypt.so -o libbcrypt.so bcrypt.c crypt_blowfish/crypt_blowfish.c crypt_blowfish/crypt_gensalt.c crypt_blowfish/wrapper.c
 cd -
 

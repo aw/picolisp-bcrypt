@@ -36,6 +36,14 @@ Once compiled, the shared library is symlinked as:
 
 The `bcrypt.l` file searches for `lib/libbcrypt.so`, relative to its current directory.
 
+### Updating
+
+This library uses git submodules, type this keep everything updated:
+
+    ./update.sh
+
+It rebuilds the share libraries and pulls the latest submodule changes.
+
 # Usage
 
 All functions are publicly accessible and namespaced with `(symbols 'bcrypt)` (or the prefix: `bcrypt~`), but only the following are necessary:

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.7 (2015-03-19)
+
+  * New format for MODULE_INFO
+  * Add update.sh
+  * Add note about Updating
+
 ## 0.2.6 (2015-03-19)
 
   * Update picolisp-unit to v0.3.0
