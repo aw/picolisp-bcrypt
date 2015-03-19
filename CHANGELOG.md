@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.8 (2015-03-19)
+
+  * Move MODULE_INFO to module.l
+
 ## 0.2.7 (2015-03-19)
 
   * New format for MODULE_INFO
