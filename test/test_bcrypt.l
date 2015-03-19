@@ -4,16 +4,13 @@
 
 (symbols 'bcrypt)
 
-(setq *Salt_12  (gensalt)
-      *Hash     (hashpw "changeme" *Salt_12)
-      *Passwd   (hashpw "changeme") )
-
-(setq *Error_1  (catch 'InternalError
-  (compare "changeme" "I have no idea what i'm doing") NIL ) )
+(setq *Salt   (gensalt)
+      *Hash   (hashpw "changeme" *Salt)
+      *Passwd (hashpw "changeme") )
 
 (de test-hash-factor-12 ()
   (unit~assert-includes "$2a$12"
-                        *Salt_12
+                        *Salt
                         "Generate a bcrypt hash with factor of 12" ) )
 
 [unit~execute
@@ -27,7 +24,7 @@
                           (gensalt 90)
                           "Does NOT generate a bcrypt hash with factor of 90" )
 
-  '(unit~assert-includes  *Salt_12
+  '(unit~assert-includes  *Salt
                           *Hash
                           "Generate matching bcrypt hashes" )
 
