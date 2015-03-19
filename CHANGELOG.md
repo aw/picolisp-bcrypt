@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.6 (2015-03-19)
+
+  * Update picolisp-unit to v0.3.0
+  * Remove unused functions and variables
+  * Use (assert-throws)
+
 ## 0.2.5 (2015-03-18)
 
   * Update picolisp-unit and change assertions
