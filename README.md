@@ -1,6 +1,6 @@
 # bcrypt hashing for PicoLisp
 
-[![GitHub release](https://img.shields.io/github/release/aw/picolisp-bcrypt.svg)](https://img.shields.io/github/release/aw/picolisp-bcrypt) [![Build Status](https://travis-ci.org/aw/picolisp-bcrypt.svg?branch=master)](https://travis-ci.org/aw/picolisp-bcrypt) [![Dependency](https://img.shields.io/badge/[deps] bcrypt-master-ff69b4.svg)](https://github.com/rg3/bcrypt.git) [![Dependency](https://img.shields.io/badge/[deps] picolisp--unit-v0.3.0-ff69b4.svg)](https://github.com/aw/picolisp-unit.git)
+[![GitHub release](https://img.shields.io/github/release/aw/picolisp-bcrypt.svg)](https://img.shields.io/github/release/aw/picolisp-bcrypt) [![Build Status](https://travis-ci.org/aw/picolisp-bcrypt.svg?branch=master)](https://travis-ci.org/aw/picolisp-bcrypt) [![Dependency](https://img.shields.io/badge/[deps] bcrypt-master-ff69b4.svg)](https://github.com/rg3/bcrypt.git) [![Dependency](https://img.shields.io/badge/[deps] picolisp--unit-v0.3.1-ff69b4.svg)](https://github.com/aw/picolisp-unit.git)
 
 This library can be used to hash strings (ex: passwords) using bcrypt in [PicoLisp](http://picolisp.com/).
 
