@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.9 (2015-03-23)
+
+  * Improve build test times
+  * Prevent leaky symbols
+
 ## 0.2.8 (2015-03-19)
 
   * Move MODULE_INFO to module.l
