@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.12 (2015-03-29)
+
+  * Actually update picolisp-unit to v0.5.2
+
 ## 0.2.11 (2015-03-29)
 
   * Update picolisp-unit to v0.5.2
