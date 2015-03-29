@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.10 (2015-03-29)
+
+  * Update picolisp-unit to v0.5.0
+
 ## 0.2.9 (2015-03-23)
 
   * Improve build test times
