@@ -22,9 +22,9 @@ This library can be used to hash strings (ex: passwords) using bcrypt in [PicoLi
 
 # Getting Started
 
-These FFI bindings require the [bcrypt C library](https://github.com/rg3/bcrypt.git), compiled as a shared library. It is included here as a [git submodule](http://git-scm.com/book/en/v2/Git-Tools-Submodules).
+These FFI bindings require the [bcrypt C library](https://github.com/rg3/bcrypt.git), compiled as a shared library.
 
-  1. Type `./build.sh` to pull and compile the _bcrypt C Library_.
+  1. Type `make` to pull and compile the _bcrypt C Library_.
   2. Include `bcrypt.l` in your project
   3. Try the [examples](#examples) below
 
@@ -32,17 +32,15 @@ These FFI bindings require the [bcrypt C library](https://github.com/rg3/bcrypt.
 
 Once compiled, the shared library is symlinked as:
 
-    lib/libbcrypt.so -> vendor/bcrypt/libbcrypt.so
+    .lib/libbcrypt.so -> .modules/bcrypt/HEAD/libbcrypt.so
 
-The `bcrypt.l` file searches for `lib/libbcrypt.so`, relative to its current directory.
+The `bcrypt.l` file searches for `.lib/libbcrypt.so`, relative to its current directory.
 
 ### Updating
 
-This library uses git submodules, type this keep everything updated:
+To keep everything updated, type:
 
-    ./update.sh
-
-It rebuilds the shared libraries and pulls the latest submodule changes.
+    git pull && make clean && make
 
 # Usage
 
@@ -136,9 +134,9 @@ pil +
 
 # Testing
 
-This library now comes with full [unit tests](https://github.com/aw/picolisp-unit). To run the tests, run:
+This library now comes with full [unit tests](https://github.com/aw/picolisp-unit). To run the tests, type:
 
-    ./test.l
+    make check
 
 # Contributing
 
