@@ -12,7 +12,7 @@
 (load (pack (car (file)) "module.l"))
 
 (setq
-  *Bcrypt           (pack (car (file)) "lib/libbcrypt.so")
+  *Bcrypt           (pack (car (file)) ".lib/libbcrypt.so")
 
   *BCRYPT_HASHSIZE  64
   *Work_factor      12 )
