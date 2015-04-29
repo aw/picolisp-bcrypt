@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.0 (2015-04-29)
+
+  * Remove the need for git submodules
+  * Add Makefile for fetching and building dependencies
+  * Change default path for dependencies and shared module (.modules and .lib)
+  * Adjust README.md, tests and travis-ci unit testing config
+
 ## 0.2.14 (2015-04-17)
 
   * Update picolisp-unit to v0.6.1
