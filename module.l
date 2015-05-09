@@ -8,5 +8,5 @@
   ("copyright"  "(c) 2015 Alexander Williams, Unscramble <license@unscramble.jp>")
   ("install"    "make")
   ("requires"
-    ("bcrypt"         "master"  "https://github.com/rg3/bcrypt.git")
+    ("bcrypt"         "8ab7fae5c1"  "https://github.com/rg3/bcrypt.git")
     ("picolisp-unit"  "v0.6.1"  "https://github.com/aw/picolisp-unit.git") ]

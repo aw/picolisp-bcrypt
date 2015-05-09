@@ -6,6 +6,7 @@ PIL_SYMLINK_DIR ?= .lib
 ## Edit below
 BUILD_REPO = https://github.com/rg3/bcrypt.git
 BUILD_DIR = $(PIL_MODULE_DIR)/bcrypt/HEAD
+BUILD_REF = 8ab7fae5c1
 TARGET = libbcrypt.so
 FILES = bcrypt.c crypt_blowfish/crypt_blowfish.c crypt_blowfish/crypt_gensalt.c crypt_blowfish/wrapper.c
 INCLUDES = -I. -Icrypt_blowfish/
@@ -37,6 +38,7 @@ $(TEST_DIR):
 
 $(BUILD_DIR)/$(TARGET):
 		cd $(BUILD_DIR) && \
+		git checkout $(BUILD_REF) && \
 		$(COMPILE) $(SHARED) -o $(TARGET) $(FILES) && \
 		strip --strip-unneeded $(TARGET)
 
