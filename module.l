@@ -1,6 +1,6 @@
 [de MODULE_INFO
   ("name"       "bcrypt")
-  ("version"    "0.3.0")
+  ("version"    "0.3.1")
   ("summary"    "bcrypt hashing for PicoLisp")
   ("source"     "https://github.com/aw/picolisp-bcrypt.git")
   ("author"     "Alexander Williams")

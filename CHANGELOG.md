@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.1 (2015-05-10)
+
+  * Use specific ref for bcrypt C lib
+
 ## 0.3.0 (2015-04-29)
 
   * Remove the need for git submodules
