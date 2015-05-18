@@ -33,6 +33,8 @@
         (native `*Bcrypt "bcrypt_hashpw" 'I Passwd Salt (cons 'Hash &hash 0))
         Hash ]
 
+(de bcrypt-checkpw (Passwd Hash)
+  (native `*Bcrypt "bcrypt_checkpw" 'I Passwd Hash) )
 
 # internal
 (de throw-error (Message)
@@ -70,8 +72,10 @@
               (to-string Result) ]
 
 [de compare (Passwd Hash)
-  (let Matched (hashpw Passwd Hash)
-    (when (= Hash Matched) T) ]
+  (let Matched (bcrypt-checkpw Passwd Hash)
+    (case Matched
+      (-1 (throw-error "Unable to hash password"))
+      (0 T) ]
 
 [de timing (Factor)
   (default Factor *Work_factor)

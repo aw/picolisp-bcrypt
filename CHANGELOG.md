@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.0 (2015-05-17)
+
+  * Use 'bcrypt_checkpw' function which protects against timing attacks
+
 ## 0.3.1 (2015-05-10)
 
   * Use specific ref for bcrypt C lib
