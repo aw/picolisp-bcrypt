@@ -9,4 +9,4 @@
   ("install"    "make")
   ("requires"
     ("bcrypt"         "3abaecaadc"  "https://github.com/rg3/bcrypt.git")
-    ("picolisp-unit"  "v0.6.1"  "https://github.com/aw/picolisp-unit.git") ]
+    ("picolisp-unit"  "v0.6.2"  "https://github.com/aw/picolisp-unit.git") ]
