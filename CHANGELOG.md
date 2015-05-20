@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.1 (2015-05-20)
+
+  * Update picolisp-unit to v0.6.2
+
 ## 0.4.0 (2015-05-17)
 
   * Use 'bcrypt_checkpw' function which protects against timing attacks
