@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.0 (2019-12-03)
+
+  * **[Breaking changes]** Remove the use of PicoLisp namespaces
+  * Update picolisp-unit dependency to v3.0.0
+
 ## 1.0.0 (2015-06-11)
 
   * Production release

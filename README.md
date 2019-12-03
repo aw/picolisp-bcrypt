@@ -1,6 +1,6 @@
 # bcrypt hashing for PicoLisp
 
-[![GitHub release](https://img.shields.io/github/release/aw/picolisp-bcrypt.svg)](https://img.shields.io/github/release/aw/picolisp-bcrypt) [![Build Status](https://travis-ci.org/aw/picolisp-bcrypt.svg?branch=master)](https://travis-ci.org/aw/picolisp-bcrypt) [![Dependency](https://img.shields.io/badge/[deps]%20bcrypt-b1e3dea0a1-ff69b4.svg)](https://github.com/rg3/bcrypt.git) [![Dependency](https://img.shields.io/badge/[deps]%20picolisp%2D-unit-v1.0.0-ff69b4.svg)](https://github.com/aw/picolisp-unit.git)
+[![GitHub release](https://img.shields.io/github/release/aw/picolisp-bcrypt.svg)](https://img.shields.io/github/release/aw/picolisp-bcrypt) [![Build Status](https://travis-ci.org/aw/picolisp-bcrypt.svg?branch=master)](https://travis-ci.org/aw/picolisp-bcrypt) [![Dependency](https://img.shields.io/badge/[deps]%20bcrypt-b1e3dea0a1-ff69b4.svg)](https://github.com/rg3/bcrypt.git) [![Dependency](https://img.shields.io/badge/[deps]%20picolisp%2D-unit-v3.0.0-ff69b4.svg)](https://github.com/aw/picolisp-unit.git) ![Build status](https://github.com/aw/picolisp-bcrypt/workflows/CI/badge.svg?branch=master)
 
 This library can be used to hash strings (ex: passwords) using bcrypt in [PicoLisp](http://picolisp.com/).
 
@@ -16,7 +16,8 @@ This library can be used to hash strings (ex: passwords) using bcrypt in [PicoLi
 
 # Requirements
 
-  * PicoLisp 64-bit v3.1.9+
+  * PicoLisp 64-bit `v3.1.9+`
+  * Tested up to PicoLisp `v19.11.25`, [see test runs](https://github.com/aw/picolisp-bcrypt/commit/1b9d4e2921e5f108dac0facbff1dc5bfff97835a/checks)
   * Git
   * UNIX/Linux development/build tools (gcc, make/gmake, etc..)
 
@@ -44,7 +45,7 @@ To keep everything updated, type:
 
 # Usage
 
-Only the following functions are exported publicly, and namespaced with `(symbols 'bcrypt)` (or the prefix: `bcrypt~`):
+Only the following functions are exported publicly:
 
   * **(gensalt Factor)** generates a salt to be used for hashing a string
     - `Factor` _Number_: a Number between 4 and 31, defaults to `12` otherwise
@@ -56,7 +57,7 @@ Only the following functions are exported publicly, and namespaced with `(symbol
     - `Hash` _String_: the hashed String of the password
   * **(timing Factor)** calculates the timing of a password hashing, in seconds. Returns the factor in `car` and seconds in `cdr`
 
-> **Note:** These functions are not namespace [local symbols](http://software-lab.de/doc/refL.html#local), which means they would redefine symbols with the same name in the `'pico` namespace.
+> **Note:** These functions are not namespace [local symbols](https://software-lab.de/doc/refL.html#local), which means they would redefine symbols with the same name in the `'pico` namespace.
 
 ### Notes
 
@@ -73,7 +74,6 @@ pil +
 
 (load "bcrypt.l")
 
-(symbols 'bcrypt)
 (gensalt)
 -> "$2a$12$mQn1fUDeEZFW74KD5kU6g."
 
@@ -88,7 +88,6 @@ pil +
 
 (load "bcrypt.l")
 
-(symbols 'bcrypt)
 (hashpw "changeme")
 -> "$2a$12$mmxN/qk8yvfjCx./KXtgfuqnUFsXjYv1ZTZmkMtdQ94rTDngiXpsq"
 
@@ -106,7 +105,6 @@ pil +
 
 (load "bcrypt.l")
 
-(symbols 'bcrypt)
 (compare "changeme" "$2a$14$kjOSmjZeLsBdru7NRPEmQuL5eU5YN4Yb48bD1A0Pxzwu/3G/7kwBy")
 -> T
 
@@ -124,7 +122,6 @@ pil +
 
 (load "bcrypt.l")
 
-(symbols 'bcrypt)
 (timing)
 -> (12 . 0)
 
@@ -148,4 +145,4 @@ If you want to improve this library, please make a pull-request.
 
 [MIT License](LICENSE)
 
-Copyright (c) 2015 Alexander Williams, Unscramble <license@unscramble.jp>
+Copyright (c) 2015-2019 Alexander Williams, Unscramble <license@unscramble.jp>

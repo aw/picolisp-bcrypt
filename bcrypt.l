@@ -2,12 +2,7 @@
 #
 # The MIT License (MIT)
 #
-# Copyright (c) 2015 Alexander Williams, Unscramble <license@unscramble.jp>
-
-(symbols 'bcrypt 'pico)
-
-(local MODULE_INFO *Bcrypt *BCRYPT_HASHSIZE *Work_factor *Salt_struct)
-(local bcrypt-gensalt bcrypt-hashpw throw-error epoch to-string)
+# Copyright (c) 2015-2019 Alexander Williams, Unscramble <license@unscramble.jp>
 
 (load (pack (car (file)) "module.l"))
 

@@ -34,7 +34,9 @@ $(BUILD_DIR):
 
 $(TEST_DIR):
 		mkdir -p $(TEST_DIR) && \
-		git clone $(TEST_REPO) $(TEST_DIR)
+		git clone $(TEST_REPO) $(TEST_DIR) && \
+		cd $(TEST_DIR) && \
+		git checkout v3.0.0
 
 $(BUILD_DIR)/$(TARGET):
 		cd $(BUILD_DIR) && \
