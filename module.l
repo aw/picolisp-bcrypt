@@ -5,7 +5,7 @@
   ("source"     "https://github.com/aw/picolisp-bcrypt.git")
   ("author"     "Alexander Williams")
   ("license"    "MIT")
-  ("copyright"  "(c) 2015-2019 Alexander Williams, Unscramble <license@unscramble.jp>")
+  ("copyright"  "(c) 2015-2020 Alexander Williams, Unscramble <license@unscramble.jp>")
   ("install"    "make")
   ("requires"
     ("bcrypt"         "b1e3dea0a1"  "https://github.com/rg3/bcrypt.git")

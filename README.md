@@ -17,7 +17,7 @@ This library can be used to hash strings (ex: passwords) using bcrypt in [PicoLi
 # Requirements
 
   * PicoLisp 64-bit `v3.1.9+`
-  * Tested up to PicoLisp `v19.11.25`, [see test runs](https://github.com/aw/picolisp-bcrypt/commit/1b9d4e2921e5f108dac0facbff1dc5bfff97835a/checks)
+  * Tested up to PicoLisp `v20.6.29`, [see test runs](https://github.com/aw/picolisp-bcrypt/commit/1b9d4e2921e5f108dac0facbff1dc5bfff97835a/checks)
   * Git
   * UNIX/Linux development/build tools (gcc, make/gmake, etc..)
 
@@ -145,4 +145,4 @@ If you want to improve this library, please make a pull-request.
 
 [MIT License](LICENSE)
 
-Copyright (c) 2015-2019 Alexander Williams, Unscramble <license@unscramble.jp>
+Copyright (c) 2015-2020 Alexander Williams, Unscramble <license@unscramble.jp>
