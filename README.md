@@ -1,3 +1,7 @@
+# WARNING: DEPRECATED
+
+I don't use this anymore, and don't plan on maintaining it. Please use at your own risk.
+
 # bcrypt hashing for PicoLisp
 
 [![GitHub release](https://img.shields.io/github/release/aw/picolisp-bcrypt.svg)](https://img.shields.io/github/release/aw/picolisp-bcrypt) [![Build Status](https://travis-ci.org/aw/picolisp-bcrypt.svg?branch=master)](https://travis-ci.org/aw/picolisp-bcrypt) [![Dependency](https://img.shields.io/badge/[deps]%20bcrypt-b1e3dea0a1-ff69b4.svg)](https://github.com/rg3/bcrypt.git) [![Dependency](https://img.shields.io/badge/[deps]%20picolisp%2D-unit-v3.0.0-ff69b4.svg)](https://github.com/aw/picolisp-unit.git) ![Build status](https://github.com/aw/picolisp-bcrypt/workflows/CI/badge.svg?branch=master)
@@ -17,7 +21,7 @@ This library can be used to hash strings (ex: passwords) using bcrypt in [PicoLi
 # Requirements
 
   * PicoLisp 64-bit `v3.1.9+`
-  * Tested up to PicoLisp `v20.6.29`, [see test runs](https://github.com/aw/picolisp-bcrypt/commit/1b9d4e2921e5f108dac0facbff1dc5bfff97835a/checks)
+  * Tested up to PicoLisp `v21`, [see test runs](https://github.com/aw/picolisp-bcrypt/commit/1b9d4e2921e5f108dac0facbff1dc5bfff97835a/checks)
   * Git
   * UNIX/Linux development/build tools (gcc, make/gmake, etc..)
 
